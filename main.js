@@ -1,13 +1,15 @@
-let flag =true;
-const shareBtn = document.querySelector(".share-btn");
-const shareBlock = document.querySelector(".share")
-shareBtn.addEventListener('click', (event)=>{
-    if(flag){
-        shareBlock.style.display="none";
-        flag = false;
-    }
-    else{
-        shareBlock.style.display="flex";
-        flag = true;
-    }
-})
+document.addEventListener("DOMContentLoaded", () => {
+    const shareIcon = document.getElementById("share-icon");
+    const shareIconHidden = document.getElementById("share-icon-hidden");
+    const shareContainer = document.getElementById("share-container");
+    const triangle = document.getElementById("triangle");
+  
+    shareIcon.addEventListener("click", () => {
+      shareContainer.classList.toggle("active");
+    });
+  
+    shareIconHidden.addEventListener("click", () => {
+      shareContainer.classList.remove("active");
+    });
+  });
+  console.log("helloworld")
